@@ -1,0 +1,13 @@
+name: 04-filter-activity
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: PR trigger check
+      run: echo "Run when PR open or sync and base branch is main."
